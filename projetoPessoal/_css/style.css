@@ -39,6 +39,13 @@ a{text-decoration: none; color: black;}
     gap: 5px;
     justify-content: center;
 }
+.class-li-ver
+{
+    background-color: rgb(192, 179, 162);
+    font-size: 18px;
+    width: 150px;
+    border-radius: 10px;
+}
 .class-li
 {
     background-color: rgb(192, 179, 162);
@@ -52,6 +59,7 @@ a{text-decoration: none; color: black;}
     display: block;
     width: 150px;
     transition: .6s;
+    text-align: center;
 }
 
 .class-menu-hidden
@@ -62,9 +70,10 @@ a{text-decoration: none; color: black;}
     height: 0;
     top: 80px;
     transition: .6s;
-    background-color: beige;
     overflow-y: hidden; 
     border-radius: 0 0 10px 10px;
+    background-color: rgb(192, 179, 162);
+
 }
 hr
 {
@@ -77,7 +86,6 @@ hr
     width: 150px;
     height: 20px;
     margin-top: 10px;
-    background-color: antiquewhite;
 }
 .class-li-hidden a
 {
@@ -86,6 +94,12 @@ hr
     height: 20px;
     transition: .6s;
     border-radius: 10px;
+    background-color: antiquewhite;
+}
+.class-li-hidden a:hover
+{
+    background-color: blue;
+    color: white;
 }
 .class-ver-menu:hover .class-menu-hidden
 {
@@ -182,26 +196,45 @@ hr
         right: 0px;
         width: 250px;
     }
-    
+    .class-li-ver
+    {
+        margin-bottom: 20px;
+        padding: 10px 0;
+        width: 100%;
+    }
 
     #id-menu-nav.active .class-ul
     {
         margin-top: 3px;
         position: absolute;
         float: right;
-        display: flex;
+        display: block;
         visibility: visible;
-        flex-direction: column;
+        /* flex-direction: column; */
+        text-align: center;
         justify-content: space-around;
         width: 250px;
-        height: 50vh;
+        height: 55vh;
         right: 0;
         background-color: rgb(255, 145, 0);
         border-radius: 0 0 0 10px;
     }
     #id-menu-nav .class-li
     {
+        text-align: center;
+        margin-bottom: 20px;
         width: 100%;
+        height: 40px;
+    }
+    #id-menu-nav .class-li:first-child
+    {
+        margin-top: 20px;
+    }
+    #id-menu-nav .class-li a
+    {
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
     }
     #id-menu-nav.active .class-li a
     {
@@ -226,6 +259,8 @@ hr
     }
     #id-menu-nav.active .class-li-hidden a
     {
+        width: 100%;
+        text-align: center;
         height: 20px;
         line-height: 20px;
     }
